@@ -185,6 +185,7 @@ def set_min_upload_date(groupid):
 def get_groups():
     config = ConfigObj(CONFIG_FILENAME,list_values=False)
     return config['groups'].split(",")
+
 def sanitize_filename(filename):
     import unicodedata
     validFilenameChars = "-_.() %s%s" % (string.ascii_letters, string.digits)
